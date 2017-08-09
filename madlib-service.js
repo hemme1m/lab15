@@ -4,13 +4,17 @@ var app = angular.module("madlibApp");
 app.factory("madlibService", function() {
     var madlibsArr = [];
 
+    function setMadlibs(newArr) {
+        madlibsArr = newArr;
+    }
+
+    function getMadlibs() {
+        return madlibsArr;
+    }
+
     return {
-        setMadlibs: function(newArr) {
-            madlibsArr = newArr;
-        },
-        getMadlibs: function() {
-            return madlibsArr;
-        }
-    };
+        setMadlibs: setMadlibs,
+        getMadlibs: getMadlibs
+    }
 });
 })();

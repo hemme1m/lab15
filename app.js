@@ -21,26 +21,22 @@ app.config(function($routeProvider) {
 app.controller("inputController", function($scope, madlibService) {
 	$scope.labels = ["Proper Name", "Location", "Adjective", "Animal", "Animals (Plural)",
 	"Proper Name (new name)", "Verb"];
-	$scope.values = new Array($scope.labels.size);
+	$scope.values = [];
 
 	$scope.madlibMaker = function() {
-		$scope.madlibArray = [];
+		$scope.madlibsArr = [];
     	for (var i = 0; i < $scope.labels.length; i++) {
-    		$scope.madlibArray.push({
+    		$scope.madlibsArr.push({
     			label: $scope.labels[i],
     			value: $scope.values[i]
     		});
     	}
-		madlibService.setMadlibs($scope.madlibArray);
+		madlibService.setMadlibs($scope.madlibsArr);
 	}
 });
 
-app.controller("displayController", function($scope, $location, madlibService) {
-	$scope.madlibSender = function() {
-		// $scope.madlibOutput = []; 
-		// $scope.madlibOutput = madlibService.getMadlibs();
-		$scope.madlibOutput = new Array(madlibService.getMadlibs());
-	}
+app.controller("displayController", function($scope, madlibService) {
+	$scope.madlibsArr = madlibService.getMadlibs();
 });
 
 })();
