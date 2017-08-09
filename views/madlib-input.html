@@ -1,11 +1,9 @@
-<form>
-	<div class="formInput">
+<div class="formInput">
+	<form ng-submit="madlibMaker()">
 		<h2>TYPE SOME WORDS</h2>
 		<label ng-repeat-start="label in labels">{{label | uppercase}}</label><br>
 		<input ng-model="values[$index]" type="text" value="" />
 		<br ng-repeat-end>
-	</div>
-	<div class="formInput">
-		<a href="#!/madlibdisplay"><button type="button" ng-click="madlibMaker()">Check it Out!</button></a>
-	</div>
-</form>
+		<button type="submit">Check it Out!</button>
+	</form>
+</div>

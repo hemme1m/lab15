@@ -17,4 +17,5 @@ app.factory("madlibService", function() {
         getMadlibs: getMadlibs
     }
 });
+
 })();
