@@ -13,7 +13,7 @@ app.config(function($routeProvider) {
 	});
 
 	$routeProvider.otherwise({
-		redirectTo: "/madlibinput"
+		template: "Please select the input link above to get started."
 	});	
 
 });
