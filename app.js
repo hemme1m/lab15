@@ -37,6 +37,8 @@ app.controller("inputController", function($scope, madlibService) {
 
 app.controller("displayController", function($scope, $location, madlibService) {
 	$scope.madlibSender = function() {
+		// $scope.madlibOutput = []; 
+		// $scope.madlibOutput = madlibService.getMadlibs();
 		$scope.madlibOutput = new Array(madlibService.getMadlibs());
 	}
 });
