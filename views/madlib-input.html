@@ -1,0 +1,12 @@
+<form>
+	<div class="formInput">
+		<h3>TYPE STUFF</h3>
+		<label ng-repeat-start="label in labels">{{label | uppercase}}</label><br>
+		<input ng-model="values[$index]" type="text" value="" />
+		<br ng-repeat-end>
+	</div>
+	<div class="formInput">
+		<button type="button" ng-click="madlibMaker()">Save Your Madlibs</button>
+		<a href="#!/madlibdisplay"><button type="button" ng-click="madlibSender()">Check it Out</button></a>
+	</div>
+</form>

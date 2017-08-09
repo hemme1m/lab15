@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+html {
+    background-color: #023E54;
+    background: linear-gradient(325deg, rgba(2,62,84, 0.75), rgba(16,170,192, 0.55));
+    min-height: 100%;
+    min-width: 560px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+button {
+    color: #023E54;
+    width: calc(25% - 20px);
+    height: 50px;
+    border-radius: 15px;
+    line-height: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0;
+    background: linear-gradient(355deg, #DDD, #AAA);
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+}
+
+button:active {
+    padding-top: 1px;
+    padding-left: 1px;
+    background: linear-gradient(355deg, #AAA, #DDD);
+}
+
+#buttonDiv {
+	list-style: none;
+	margin: 0 2px;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+}
+
+main {
+    padding: 15px 5px;
+    background-color: whitesmoke;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: -4px 5px 6px #023E54;
+}
+main > div {
+    padding: 15px;
+}
